@@ -76,19 +76,33 @@ Compare the original modulating signal with the demodulated signal. PROCEDURE
 
 Program
 Am=2.9;
+
 fm=247;
+
 Ac=5.8;
+
 fc=2470;
+
 fs=24700;
+
 t=0:1/fs:2/fm;
+
 subplot(3,1,1);
+
 m=Am*cos(2*%pi*fm*t);
+
 plot(t,m);
+
 subplot(3,1,2)
+
 c=Ac*cos(2*%pi*fc*t);
+
 plot(t,c);
+
 subplot(3,1,3)
+
 s=(Ac+m).*cos(2*%pi*fc*t);
+
 plot(t,s);
 
 
